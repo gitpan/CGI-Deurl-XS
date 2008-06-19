@@ -138,6 +138,19 @@ unescape_url_u(char* url)
 
 static
 char*
+_strndup(char* str, size_t len)
+{
+    char *dup = (char*) malloc(len+1);
+    if (dup) {
+        strncpy(dup, str, len);
+        dup[len] = '\0';
+    }
+    return dup;
+}
+
+
+static
+char*
 urlword(char** line)
 {
     char* res = 0;
@@ -148,7 +161,7 @@ urlword(char** line)
         ++pos;
     }
 
-    res = strndup(*line, pos - *line);
+    res = _strndup(*line, pos - *line);
 
     while (ch == ';' || ch == '&') {
         ++pos;

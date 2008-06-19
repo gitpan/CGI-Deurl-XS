@@ -13,7 +13,7 @@ our @ISA = qw(Exporter);
 our @EXPORT_OK = qw/parse_query_string/;
 our @EXPORT = qw();
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -97,7 +97,7 @@ L<libapreq>
 
 =head1 AUTHOR
 
-Adam Thomason, E<lt>athomason@sixapart.com<gt>
+Adam Thomason, E<lt>athomason@sixapart.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
